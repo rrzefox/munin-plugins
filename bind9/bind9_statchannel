@@ -18,6 +18,8 @@ The following environment variables are used by this plugin
           - The names of the zones for the "answered per zone" graph. Comma-separated.
             Defaults to autodetect. Autodetect will graph all zones with a serial number of
             at least 100. Set to "none" to disable that graph altogether.
+            You also need to add "zone-statistics full;" to the options section in the
+            bind config, as otherwise bind does not collect these stats.
  XML_SIMPLE_PREFERRED_PARSER
           - tells XML::Simple which parser to use. If XML::SAX is installed, XML::Simple
             will default to that, and it is EXTREMELY sluggish.
